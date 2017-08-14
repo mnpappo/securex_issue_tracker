@@ -2,39 +2,12 @@ from django.db import models
 from django.conf import settings
 
 
-PRODUCT_TYPE = (
-    ('driver_uniform','Driver Uniform'),
-    ('superviser_uniform','Superviser Uniform'),
-    ('cleaner_uniform','Cleaner Uniform'),
-    ('salower_kamiz','Salower Kamiz'),
-    ('orna','Orna'),
-    ('shoes_black','Shoes Black'),
-    ('bata_pump_shoes','Bata Pump Shoes'),
-    ('rubber_shoes','Rubber Shoes'),
-    ('shocks_nylon','Socks Nylon'),
-    ('jursey_pull_over','Jursey Pull Over'),
-    ('cardigan','Cardigan'),
-    ('jacket_supervisor','Jacket Supervisor'),
-    ('tie_black','Tie Black'),
-    ('id_color','ID Color'),
-    ('rain_coat','Rain Coat'),
-    ('gumboot','Gumboott'),
-    ('torch_elect','Torch Elect'),
-)
-
-PRODUCT_SUPPLIER = (
-    ('bata','Bata'),
-    ('apex', 'Apex'),
-    ('red','RED'),
-    ('orange','ORANGE'),
-    ('black','BLACK'),
-)
-
 class ProductSupplier(models.Model):
     supplier_name = models.CharField(max_length=20)
     
     def __str__(self):
         return self.supplier_name
+
 
 class Product(models.Model):
     product_name = models.CharField(max_length=20)

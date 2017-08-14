@@ -9,6 +9,7 @@ class IssueAdmin(admin.ModelAdmin):
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('product_name', 'supplier')
+    list_filter = ['product_name', 'supplier']
 
 class ProductSupplierAdmin(admin.ModelAdmin):
     list_display = ('supplier_name',)
@@ -17,3 +18,5 @@ class ProductSupplierAdmin(admin.ModelAdmin):
 admin.site.register(Issue, IssueAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(ProductSupplier, ProductSupplierAdmin)
+
+admin.site.site_title = 'My App Admin'
