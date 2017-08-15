@@ -19,4 +19,5 @@ admin.site.register(Issue, IssueAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(ProductSupplier, ProductSupplierAdmin)
 
-admin.site.site_title = 'My App Admin'
+admin.site.site_header = 'Securex Issue Tracker'
+admin.site.site_title = 'Welcome to Securex Issue Tracker'
